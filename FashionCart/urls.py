@@ -27,5 +27,5 @@ urlpatterns = [
     url(r'^accounts/register/$', UserRegisterView.as_view(), name='register'),
     url(r'^auth/', include('social_django.urls', namespace='social')),
     url(r'^ajax/validate_username/$', views.validate_username, name="validate_username"),
-
+    url(r'^djrichtextfield/', include('djrichtextfield.urls'))
 ]

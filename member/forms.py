@@ -9,7 +9,8 @@ class CreateUserForm(UserCreationForm):
         widgets = {
             'username': forms.TextInput(attrs={'class': 'username', 'placeholder':'8자 이내로 입력 가능합니다.'}),
             'nickname': forms.TextInput(attrs={'class': 'nickname', 'placeholder': '5자 이내로 입력 가능합니다.'}),
-            'phone_nember': forms.TextInput(attrs={'class': 'nickname', 'placeholder': '000-0000-0000'}),
+            'phone_nember': forms.TextInput(attrs={'class': 'phone_nember', 'placeholder': '000-0000-0000'}),
+            'email':forms.EmailInput(attrs={'class':'email','placeholder': 'aaa@aaa.aaa'}),
         }
         labels = {
             'username': '아이디',

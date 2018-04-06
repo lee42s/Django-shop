@@ -27,6 +27,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
 
+DJRICHTEXTFIELD_CONFIG = {
+    'js': ['//tinymce.cachefly.net/4.1/tinymce.min.js'],
+    'init_template': 'djrichtextfield/init/tinymce.js',
+    'settings': {
+        'menubar': False,
+        'plugins': 'link image',
+        'toolbar': 'bold italic | link image | removeformat',
+        'width': 700
+    }
+}
 
 # Application definition
 
@@ -40,6 +50,8 @@ INSTALLED_APPS = [
     'member',
     'social_django',
     'phonenumber_field',
+    'goods',
+    'djrichtextfield',
 ]
 
 MIDDLEWARE = [
